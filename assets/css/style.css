@@ -81,9 +81,10 @@ html, body{
     /*color: #111111;*/
     font-weight: 400;
     resize: none;
-    padding: 10px 15px 10px 15px;
-    margin-bottom: 1em;
+    padding: 15px 15px 15px 15px;
+    margin-bottom: 10px;
     background-color: rgb(255,235,195);
+
 
 
 }
