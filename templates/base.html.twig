@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+</head>
+<body class="container-fluid">
+<script src="{{ asset('build/app.js') }}"></script>
+<header>
+    <nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light row">
+        <a class="navbar-brand" href="#"><img src="images/logo-2.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="images/logo-finish.png">
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="intmenu" class="navbar-nav mr-auto col-sm-5">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/deck">Deck</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/classement">Classement</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="/topequipe">Top Equipe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="/regles">Règles</a>
+                </li>
+            </ul>
+
+            <ul class="offset-sm-5">
+                <li id="dropdown" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="images/parametre.png">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/connexion">Profil</a>
+                        <a class="dropdown-item" href="#">Decoonection</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+<footer class="row">
+    <ul id="footer" class="col-sm-4">
+        <a href="/contact"><li>Contactez-Nous</li></a>
+        <a href="/mentionlegal"><li>Mention-Legal</li></a>
+    </ul>
+</footer>
+</body>
 </html>

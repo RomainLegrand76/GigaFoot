@@ -1,0 +1,156 @@
+/* Typo definie pour H1 et H2 */
+h1, h2 {
+    font-family: "expressway", Arial, Georgia ;
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* Typo definie pour P */
+P {
+    font-family: "PT_Sans-Web-Regular", Arial, Georgia ;
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+/* Body */
+html, body{
+    font-size: 100%;
+    /*background: #ffffff;*/
+    background-color: grey !important;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+
+}
+/* Fin Body */
+
+/* Page Mention Legale */
+#mainMentionLegale{
+    margin-top: 5%;
+}
+
+
+
+#container {
+    /*background: none;*/
+    border: 1.5px solid #CBCBCB;
+    width: 100%;
+    display: block;
+    height: 150px;
+    outline: none;
+    font-size: 0.9em;
+    /*color: #111111;*/
+    font-weight: 400;
+    resize: none;
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 1em;
+    background-color: grey;
+
+
+}
+
+#mentionLegaleTitre {
+
+    display: flex;
+    justify-content: center !important;
+
+}
+
+#mentionLegale {
+    text-align: justify !important;
+}
+
+/* Fin Page Mention Legale */
+
+/* Page Contact */
+
+/* Fin Page Contact */
+
+/* Page Règles */
+
+#containerReglesButDuJeux {
+    /*background: none;*/
+    border: 1.5px solid #CBCBCB;
+    width: 100%;
+    display: block;
+    height: auto;
+    outline: none;
+    font-size: 0.9em;
+    /*color: #111111;*/
+    font-weight: 400;
+    resize: none;
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 1em;
+    background-color: grey;
+}
+#containerReglesCalculeDesPoints {
+    /*background: none;*/
+    border: 1.5px solid #CBCBCB;
+    width: 100%;
+    display: block;
+    height: auto;
+    outline: none;
+    font-size: 0.9em;
+    /*color: #111111;*/
+    font-weight: 400;
+    resize: none;
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 1em;
+    background-color: grey;
+}
+#reglesCalculeDesPoint {
+    display: flex;
+    justify-content: center !important;
+}
+
+/* Fin Page Règles */
+
+/*header*/
+
+header{
+    background-image: url("../../public/images/fond.jpg");
+
+}
+
+#menu{
+    background-image: url("../../public/images/fond.jpg");
+}
+
+.nav-link{
+    color : white !important;
+}
+
+.dropdown{
+    list-style: none;
+    padding-left: 60px;
+}
+
+#intmenu{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Fin Page header */
+
+/* Footer*/
+
+#footer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding-top: 20px;
+    list-style: none;
+}
+
+footer{
+    background-image: url("../../public/images/fond.jpg");
+    height: 69px;
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+}
+
+/*fin du Footer*/
