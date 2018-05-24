@@ -43,6 +43,7 @@ P {
     font-family: "PT_Sans-Web-Regular", Arial, Georgia ;
     /*font-style: italic;
     font-weight: normal;*/
+    text-align: justify !important;
 }
 
 
@@ -50,7 +51,7 @@ P {
 html, body{
     font-size: 100%;
     /*background: #ffffff;*/
-    background-color: grey !important;
+    background-color: white !important;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -o-transition: 0.5s all;
@@ -67,12 +68,14 @@ html, body{
 
 
 
-#container {
+.divMentionLegale {
     /*background: none;*/
-    border: 1.5px solid #CBCBCB;
+    -moz-box-shadow: 10px 10px 15px #000000;
+    -webkit-box-shadow: 10px 10px 15px #000000;
+    box-shadow: 10px 10px 15px #000000;
     width: 100%;
     display: block;
-    height: 150px;
+    height: auto;
     outline: none;
     font-size: 0.9em;
     /*color: #111111;*/
@@ -80,7 +83,7 @@ html, body{
     resize: none;
     padding: 10px 15px 10px 15px;
     margin-bottom: 1em;
-    background-color: grey;
+    background-color: rgb(255,235,195);
 
 
 }
@@ -106,7 +109,7 @@ html, body{
 
 #containerReglesButDuJeux {
     /*background: none;*/
-    border: 1.5px solid #CBCBCB;
+    border: 1.5px solid red;
     width: 100%;
     display: block;
     height: auto;
