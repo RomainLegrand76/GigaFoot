@@ -64,6 +64,8 @@ html, body{
 /* Page Mention Legale */
 #mainMentionLegale{
     margin-top: 5%;
+    margin-bottom: auto;
+    padding-bottom: 10%;
 }
 
 
@@ -83,7 +85,8 @@ html, body{
     resize: none;
     padding: 15px 15px 15px 15px;
     margin-bottom: 10px;
-    background-color: rgb(255,235,195);
+    background-color: rgb(255,255,250);
+    padding-bottom: auto;
 
 
 
@@ -188,6 +191,7 @@ footer{
     width: 100%;
     position: fixed;
     bottom: 0%;
+
 }
 
 /*fin du Footer*/
