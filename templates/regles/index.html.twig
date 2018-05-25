@@ -3,18 +3,18 @@
 {% block title %} Règles du jeux{% endblock %}
 
 {% block body %}
-    <main>
+    <main id="mainRegles">
 
         <div class="container" id="containerReglesButDuJeux">
             <div class="row">
                 <div class="col-md-12">
 
-                    <div> <H1>But du jeux</H1> </div>
+                    <div id="reglesTitre"> <H1>Bienvenue dans l'equipe GigaFoot !</H1> </div>
 
                     <p id="butDuJeux">
 
+                    <div id="reglesTitreButDuJeux"><h2>Règles de GigaFoot :</h2></div>
 
-                        Bienvenue dans l'equipe GigaFoot !
 
                     <ul>
                         <li>
@@ -36,10 +36,6 @@
                     </ul>
 
 
-                    <h2>But du jeux de GigaFoot :</h2>
-
-                    Terminer avec le plus de points possible, en pariant sur le pays.
-
 
                 </div>
             </div>
@@ -49,19 +45,25 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <div> <H1>Calcule des points</H1> </div>
+                    <div> <H2>Calcule des points</H2> </div>
 
                     <p id="reglesCalculeDesPoint">
 
-                        POINTS + ? + PASSES + ? + CONTRES + TIRS RÉUSSIS + ? + ?
+                    <div id="reglesBonus"> BUTS + ARRÊT + PASSES RÉUSSIE + PASSES DÉCISIVE + POSSESSION + TIRS CADRER</div>
 
-                        <br><br>
+                    <br><br>
 
-                        a enlever
+                    <div id="reglesEnlever">À enlever</div>
 
-                        <br></br>
+                    <br></br>
 
-                        ? + TIRS RATÉS + ? + LANCERS RATÉS
+                    <div id="reglesMalus">HORS JEU + TIRS NON CADRER + FAUTES + CARTON JAUNES + CARTON ROUGE*<sup>*</sup> + PASSE RATER</div>
+
+                    <br></br>
+
+                    <div><sup>*</sup>Le carton rouge vous enlèvera -2 points.</div>
+
+
                     </p>
 
 
