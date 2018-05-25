@@ -220,6 +220,16 @@ footer{
 
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
 /*fin du Footer*/
 
 /* Debut accordion deck*/
