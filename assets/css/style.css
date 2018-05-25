@@ -183,13 +183,13 @@ header{
     color: white;
     padding-top: 20px;
     list-style: none;
+    width: 100%;
 }
 
 footer{
     background-image: url("../../public/images/fond.jpg");
     height: 69px;
     width: 100%;
-    position: fixed;
     bottom: 0%;
 
 }
