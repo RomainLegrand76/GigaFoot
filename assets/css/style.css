@@ -190,8 +190,17 @@ footer{
     background-image: url("../../public/images/fond.jpg");
     height: 69px;
     width: 100%;
-    bottom: 0%;
+    bottom: 0;
 
 }
 
 /*fin du Footer*/
+
+/* Debut accordion deck*/
+
+#containerAccordion{
+    width: 40%;
+}
+
+
+/*Fin Accordion deck*/
