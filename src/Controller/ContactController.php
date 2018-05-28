@@ -33,7 +33,7 @@ class ContactController extends Controller
         $formulaire = $this->createFormBuilder($contact)
             ->add('nom', TextType::class)
             ->add('prenom', TextType::class)
-            ->add('mail', TextType::class)
+            ->add('mail', EmailType::class)
             ->add('corp', TextareaType::class)
             ->add('envoyer', SubmitType::class, array('label' => 'Envoyer'))
             ->getForm();
