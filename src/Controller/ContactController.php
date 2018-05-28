@@ -25,20 +25,10 @@ class ContactController extends Controller
     /**
      * @Route("/contact", name="contact")
      */
-    public function index()
-    {
-        return $this->render('contact/index.html.twig', [
-            'controller_name' => 'ContactController',
-        ]);
-    }
 
     public function formulaire(Request $requete)
     {
         $contact = new Contact();
-        $contact->setNom('Votre Nom');
-        $contact->setPrenom('Votre Prenom');
-        $contact->setMail('Votre Mail');
-        $contact->setCorp('Description ...');
 
         $formulaire = $this->createFormBuilder($contact)
             ->add('nom', TextType::class)
