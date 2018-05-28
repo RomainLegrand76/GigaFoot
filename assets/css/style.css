@@ -99,10 +99,48 @@ html, body{
     text-align: justify !important;
 }
 
+
 /* Fin Page Mention Legale */
 
 /* Page Contact */
 
+#mainContact{
+    margin-top: 5%;
+    margin-bottom: auto;
+    padding-bottom: 10%;
+}
+
+#contactNousContacter{
+    text-align: center !important;
+}
+
+#contactNousTrouver{
+    text-align: center !important;
+}
+
+#containerContact{
+    /*background: none;*/
+    -moz-box-shadow: 15px 15px 15px 15px #000000;
+    -webkit-box-shadow: 15px 15px 15px 15px #000000;
+    box-shadow: 15px 15px 15px 15px #000000;
+    width: 100%;
+    display: block;
+    height: auto;
+    outline: none;
+    font-size: 0.9em;
+    /*color: #111111;*/
+    font-weight: 400;
+    resize: none;
+    padding: 15px 15px 15px 15px;
+    margin-bottom: 10px;
+    background-color: rgb(255,255,250);
+    padding-bottom: auto;
+}
+
+#contactMap{
+    display: flex;
+    justify-content: center !important;
+}
 /* Fin Page Contact */
 
 /* Page Règles */
