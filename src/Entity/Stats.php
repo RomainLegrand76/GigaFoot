@@ -81,6 +81,12 @@ class Stats
      */
     private $sta_date;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Countries", inversedBy="stat")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $cou_id;
+
     public function getId()
     {
         return $this->id;
@@ -238,6 +244,18 @@ class Stats
     public function setStaDate(\DateTimeInterface $sta_date): self
     {
         $this->sta_date = $sta_date;
+
+        return $this;
+    }
+
+    public function getCouId(): ?Countries
+    {
+        return $this->cou_id;
+    }
+
+    public function setCouId(?Countries $cou_id): self
+    {
+        $this->cou_id = $cou_id;
 
         return $this;
     }

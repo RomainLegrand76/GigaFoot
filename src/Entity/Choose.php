@@ -26,6 +26,18 @@ class Choose
      */
     private $cho_points;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Countries", inversedBy="choices")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $cou_id;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Users", inversedBy="choice")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $use_id;
+
     public function getId()
     {
         return $this->id;
@@ -51,6 +63,30 @@ class Choose
     public function setChoPoints(?int $cho_points): self
     {
         $this->cho_points = $cho_points;
+
+        return $this;
+    }
+
+    public function getCouId(): ?Countries
+    {
+        return $this->cou_id;
+    }
+
+    public function setCouId(?Countries $cou_id): self
+    {
+        $this->cou_id = $cou_id;
+
+        return $this;
+    }
+
+    public function getUseId(): ?Users
+    {
+        return $this->use_id;
+    }
+
+    public function setUseId(?Users $use_id): self
+    {
+        $this->use_id = $use_id;
 
         return $this;
     }

@@ -21,6 +21,18 @@ class CourseOf
      */
     private $score;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Countries", inversedBy="courseOf")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $cou_id;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Match", inversedBy="courseOf")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $mat_id;
+
     public function getId()
     {
         return $this->id;
@@ -34,6 +46,30 @@ class CourseOf
     public function setScore(?string $score): self
     {
         $this->score = $score;
+
+        return $this;
+    }
+
+    public function getCouId(): ?Countries
+    {
+        return $this->cou_id;
+    }
+
+    public function setCouId(?Countries $cou_id): self
+    {
+        $this->cou_id = $cou_id;
+
+        return $this;
+    }
+
+    public function getMatId(): ?Match
+    {
+        return $this->mat_id;
+    }
+
+    public function setMatId(?Match $mat_id): self
+    {
+        $this->mat_id = $mat_id;
 
         return $this;
     }

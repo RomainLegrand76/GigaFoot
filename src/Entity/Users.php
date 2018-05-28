@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -50,6 +52,16 @@ class Users
      * @ORM\Column(type="integer")
      */
     private $use_role;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Choose", mappedBy="use_id")
+     */
+    private $choice;
+
+    public function __construct()
+    {
+        $this->choice = new ArrayCollection();
+    }
 
     public function getId()
     {
@@ -136,6 +148,37 @@ class Users
     public function setUseRole(int $use_role): self
     {
         $this->use_role = $use_role;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Choose[]
+     */
+    public function getChoice(): Collection
+    {
+        return $this->choice;
+    }
+
+    public function addChoice(Choose $choice): self
+    {
+        if (!$this->choice->contains($choice)) {
+            $this->choice[] = $choice;
+            $choice->setUseId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeChoice(Choose $choice): self
+    {
+        if ($this->choice->contains($choice)) {
+            $this->choice->removeElement($choice);
+            // set the owning side to null (unless already changed)
+            if ($choice->getUseId() === $this) {
+                $choice->setUseId(null);
+            }
+        }
 
         return $this;
     }
