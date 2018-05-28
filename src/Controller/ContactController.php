@@ -32,6 +32,34 @@ class ContactController extends Controller
         ]);
     }
 
+    public function formulaire(Request $requete)
+    {
+        $contact = new Contact();
+        $contact->setNom('Votre Nom');
+        $contact->setPrenom('Votre Prenom');
+        $contact->setMail('Votre Mail');
+        $contact->setCorp('Description ...');
+
+        $formulaire = $this->createFormBuilder($contact)
+            ->add('nom', TextType::class)
+            ->add('prenom', TextType::class)
+            ->add('mail', TextType::class)
+            ->add('corp', TextareaType::class)
+            ->add('envoyer', SubmitType::class, array('label' => 'Envoyer'))
+            ->getForm();
+
+        $formulaire->handleRequest($requete);
+
+
+
+        return $this->render('/contact/index.html.twig',
+            array(
+                'contact' => $formulaire->createView(),
+            ));
+    }
+
+
+
 
 
 
