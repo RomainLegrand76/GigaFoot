@@ -4,42 +4,20 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
- */
+
 class Contact
 {
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
+
     private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $nom;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $prenom;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $mail;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
 
     private $corp;
 
-    /**
-     * @ORM\Column(type="text", length=255)
-     */
 
     public function getId()
     {
