@@ -116,7 +116,8 @@ html, body{
 
 #containerReglesButDuJeux {
     /*background: none;*/
-    /*border: 1.5px solid red;*/
+    border: 1.5px solid black;
+    box-shadow: 10px 10px 10px 10px #000000;
     width: 100%;
     display: block;
     height: auto;
@@ -126,12 +127,12 @@ html, body{
     font-weight: 400;
     resize: none;
     padding: 10px 15px 10px 15px;
-    background-color: rgb(255,255,250);
     padding-bottom: auto;
 }
 #containerReglesCalculeDesPoints {
     /*background: none;*/
-    /*border: 1.5px solid #CBCBCB;*/
+    border: 1.5px solid black;
+    box-shadow: 10px 10px 10px 10px #000000;
     width: 100%;
     display: block;
     height: auto;
@@ -142,7 +143,7 @@ html, body{
     resize: none;
     padding: 10px 15px 10px 15px;
     margin-bottom: 1em;
-    background-color: rgb(255,255,250);
+    margin-top: 10%;
 }
 #reglesCalculeDesPoint {
     display: flex;
