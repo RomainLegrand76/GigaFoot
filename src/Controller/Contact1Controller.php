@@ -22,11 +22,11 @@ class Contact1Controller extends Controller
         if ($form->isSubmitted() && $form->isValid()){
             $contactFormData = $form->getData();
 
-            $message = (new \Swift_Message('You Got Mail!'))
-                ->setFrom($contactFormData['email'])
+            $message = (new \Swift_Message(/*'You Got Mail!'*/))
+                ->setFrom($contactFormData["email"])
                 ->setTo('gigafoot.pro@gmail.com')
                 ->setBody(
-                    $contactFormData['message'],
+                    $contactFormData['message'] . " " . $contactFormData['email'],
                     'text/plain'
                 )
             ;
@@ -34,6 +34,7 @@ class Contact1Controller extends Controller
             $mailer->send($message);
 
             return $this->redirectToRoute('contact1');
+
 
         }
 
