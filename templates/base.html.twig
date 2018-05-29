@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>{% block title %}Welcome!{% endblock %}</title>
     {% block stylesheets %}{% endblock %}
+    <script src="{{ asset('build/app.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('build/app.css') }}">
 </head>
 <body>
     <div class="container-fluid">
-<script src="{{ asset('build/app.js') }}"></script>
+
 <header>
     <nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light row">
         <a class="navbar-brand" href="#"><img src="images/logo-2.png"></a>

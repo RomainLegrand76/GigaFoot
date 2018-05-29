@@ -1,20 +1,24 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <script src="{{ asset('build/app.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+</head>
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'src/Controller/ConnexionController.php'|file_link(0) }}">src/Controller/ConnexionController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'templates/connexion/index.html.twig'|file_link(0) }}">templates/connexion/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <body id="bodyConnect">
+    <div>
+        <main class="row">
+            <div class="offset-lg-5	 col-lg-2" id="containerConnect">
+                <div  id="divConnect">
+                    <img src="images/Logo-2.png">
+                </div>
+                <h4 id="titreconnect">Le match commence ici !</h4>
+            </div>
+        </main>
+    </div>
+    </body>
 {% endblock %}
