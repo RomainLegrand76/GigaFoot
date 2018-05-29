@@ -141,6 +141,39 @@ html, body{
     display: flex;
     justify-content: center !important;
 }
+
+#contactFormulaire{
+    display: flex;
+    justify-content: center !important;
+    text-align: center !important;
+
+}
+
+#form_nom{
+    margin-left: 5%;
+    width: 90%;
+}
+
+#form_prenom{
+    margin-left: 5%;
+    width: 90%;
+}
+#form_mail{
+    margin-left: 5%;
+    width: 90%;
+}
+#form_corp{
+    margin-left: 5%;
+    width: 90%;
+}
+#form_envoyer{
+    margin-left: 35%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+
 /* Fin Page Contact */
 
 /* Page Règles */
