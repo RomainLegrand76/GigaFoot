@@ -23,7 +23,7 @@ class Contact1Controller extends Controller
             $contactFormData = $form->getData();
 
             $message = (new \Swift_Message(/*'You Got Mail!'*/))
-                ->setFrom($contactFormData["email"])
+                ->setFrom($contactFormData['email'])
                 ->setTo('gigafoot.pro@gmail.com')
                 ->setBody(
                     $contactFormData['message'] . " " . $contactFormData['email'],
