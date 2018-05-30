@@ -26,7 +26,10 @@ class ContactController extends Controller
                 ->setFrom($contactFormData['email'])
                 ->setTo('gigafoot.pro@gmail.com')
                 ->setBody(
-                    $contactFormData['message'] . " " . $contactFormData['email'],
+                    $contactFormData['message'] . " " . $contactFormData['email'] . "\n \n \n" . "L’equipe GigaFoot \n
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Ce message électronique et ses fichiers attaches sont strictement confidentiels et peuvent contenir des éléments dont GigaFoot est propriétaires. Ils sont donc destinés à l'usage de leurs seuls destinataires. Si vous avez reçu ce message par erreur, merci de le retourner à son émetteur et de le détruire ainsi que toutes les pièces attachées. L'utilisation, la divulgation, la publication, la distribution, ou la reproduction non expressément autorisée de ce message et de ses pièces attachées sont interdites.
+-------------------------------------------------------------------------------------------------------------------------------------------------",
                     'text/plain'
                 )
             ;
