@@ -22,7 +22,7 @@ class Contact1Controller extends Controller
         if ($form->isSubmitted() && $form->isValid()){
             $contactFormData = $form->getData();
 
-            $message = (new \Swift_Message(/*'You Got Mail!'*/))
+            $message = (new \Swift_Message($contactFormData['subject']))
                 ->setFrom($contactFormData['email'])
                 ->setTo('gigafoot.pro@gmail.com')
                 ->setBody(
