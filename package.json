@@ -16,7 +16,7 @@
         "jquery": "^3.3.1",
         "jquery-ui": "^1.12.1",
         "popper.js": "^1.14.3",
-        "webpack": "^4.10.1",
+        "webpack": "^4.10.2",
         "webpack-jquery-ui": "^1.0.0"
     }
 }

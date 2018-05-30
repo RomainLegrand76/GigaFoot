@@ -10,6 +10,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+
 
 class InscriptionController extends Controller
 {
@@ -25,8 +27,15 @@ class InscriptionController extends Controller
             ->add('use_pseudo', TextType::class)
             ->add('use_firstname',TextType::class)
             ->add('use_lastname',TextType::class)
-            ->add('use_password',PasswordType::class)
-            ->add('use_mail',EmailType::class)
+            ->add('use_password', RepeatedType::class, array(
+                'type' => PasswordType::class,
+                'first_options'  => array('label' => 'Mot de passe'),
+                'second_options' => array('label' => 'Confirmation mot de passe'),
+            ))
+            ->add('use_mail', RepeatedType::class, array(
+                'type' => EmailType::class,
+                'first_options'  => array('label' => 'Mail'),
+                'second_options' => array('label' => 'Confirmation mot du mail'),
             ->add('envoyer',SubmitType::class, array('label' => 'Valider'))
             ->getForm();
 
