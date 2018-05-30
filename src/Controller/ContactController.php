@@ -2,56 +2,42 @@
 
 namespace App\Controller;
 
-
-use App\Entity\Contact;
-
-
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use App\Form\ContactType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\HttpFoundation\Request;
 
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Validator\Constraints\Email;
-use Symfony\Component\Validator\Constraints\NotBlank;
 
 class ContactController extends Controller
 {
     /**
      * @Route("/contact", name="contact")
      */
-
-    public function formulaire(Request $requete)
+    public function index(Request $request, \Swift_Mailer $mailer)
     {
-        $contact = new Contact();
+        $form = $this->createForm(ContactType::class);
 
-        $formulaire = $this->createFormBuilder($contact)
-            ->add('nom', TextType::class)
-            ->add('prenom', TextType::class)
-            ->add('mail', EmailType::class)
-            ->add('corp', TextareaType::class)
-            ->add('envoyer', SubmitType::class, array('label' => 'Envoyer'))
-            ->getForm();
+        $form->handleRequest($request);
 
-        $formulaire->handleRequest($requete);
+        if ($form->isSubmitted() && $form->isValid()){
+            $contactFormData = $form->getData();
+
+            $message = (new \Swift_Message($contactFormData['subject']))
+                ->setFrom($contactFormData['email'])
+                ->setTo('gigafoot.pro@gmail.com')
+                ->setBody(
+                    $contactFormData['message'] . " " . $contactFormData['email'],
+                    'text/plain'
+                )
+            ;
+
+            $mailer->send($message);
+
+            return $this->redirectToRoute('contact');
 
 
+        }
 
-        return $this->render('/contact/index.html.twig',
-            array(
-                'contact' => $formulaire->createView(),
-            ));
+        return $this->render('contact/index.html.twig', ['our_form' => $form, 'our_form' => $form->createView(),]);
     }
-
-
-
-
-
-
 }
-

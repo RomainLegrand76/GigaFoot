@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Contact {% endblock %}
+{% block title %}Our Contact Form{% endblock title %}
 
 {% block body %}
 <main id="mainContact">
@@ -10,21 +10,23 @@
 
             <div class="col-md-12">
 
-                <div id="contactNousContacter"> <H1>Nous Contacter</H1> </div>
+                <div id="contactNousContacter"><H1>Nous Contacter</H1></div>
             </div>
 
         </div>
 
-            <div class="row" id="contactFormulaire">
-                <div class="col-md-12">
-                    <div id="contactFormulaire">
+        <div class="row" id="contactFormulaire">
+            <div class="col-md-12">
+                <div id="contactFormulaire">
 
-                        {{ form_start(contact) }}
-                        {{ form_widget(contact) }}
-                        {{ form_end(contact) }}
+                    <div>
+                        {{ form_start(our_form) }}
+                        {{ form_widget(our_form) }}
+                        {{ form_end(our_form) }}
                     </div>
                 </div>
             </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
 
@@ -43,4 +45,4 @@
     </div>
 </main>
 
-    {% endblock %}
+{% endblock %}
