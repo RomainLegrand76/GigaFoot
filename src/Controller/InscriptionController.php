@@ -35,7 +35,7 @@ class InscriptionController extends Controller
             ->add('use_mail', RepeatedType::class, array(
                 'type' => EmailType::class,
                 'first_options'  => array('label' => 'Mail'),
-                'second_options' => array('label' => 'Confirmation mot du mail'),
+                'second_options' => array('label' => 'Confirmation mot du mail'),))
             ->add('envoyer',SubmitType::class, array('label' => 'Valider'))
             ->getForm();
 
