@@ -82,10 +82,11 @@ class Stats
     private $sta_date;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Countries", inversedBy="stat")
+     * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Countries", inversedBy="stats")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $cou_id;
+    private $cou_id_id;
 
     public function getId()
     {
@@ -248,14 +249,14 @@ class Stats
         return $this;
     }
 
-    public function getCouId(): ?Countries
+    public function getCouIdId(): ?Countries
     {
-        return $this->cou_id;
+        return $this->cou_id_id;
     }
 
-    public function setCouId(?Countries $cou_id): self
+    public function setCouId(?Countries $cou_id_id): self
     {
-        $this->cou_id = $cou_id;
+        $this->cou_id_id = $cou_id_id;
 
         return $this;
     }

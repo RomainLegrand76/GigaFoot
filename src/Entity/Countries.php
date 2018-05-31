@@ -15,6 +15,7 @@ class Countries
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @ORM\OneToMany(targetEntity="App\Entity\Stats", mappedBy="countries")
      */
     private $id;
 
