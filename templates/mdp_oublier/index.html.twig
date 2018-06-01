@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {% endblock %}
+
+{% block body %}
+    <body id="bodyMdpPerdu">
+    <main id="mainMdpPerdu">
+        <div class="container" id="containerMdpPerdu">
+            <div class="row" id="MdpPerdu">
+                <div class="offset-lg-5 col-lg-2">
+                    <img src="images/logoblanc.png">
+                </div>
+                <div class="col-md-12">
+                    <div id="mdpPerduTitre"><H1>Vous avez oubliez votre mot de passe</H1></div>
+                </div>
+                <div class="col-md-12">
+                    <div id="mdpPerduFormulaire">
+                        <div>
+                            {{ form_start(mdp_perdu_form) }}
+                            {{ form_widget(mdp_perdu_form) }}
+                            {{ form_end(mdp_perdu_form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    </body>
+{% endblock %}
