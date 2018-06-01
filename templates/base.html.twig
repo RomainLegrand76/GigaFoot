@@ -7,10 +7,10 @@
     <script src="{{ asset('build/app.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('build/app.css') }}">
 </head>
-<body>
+<body id="bodyBase">
     <div class="container-fluid">
 
-<header>
+<header id="header">
     <nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light row">
         <a class="navbar-brand" href="#"><img src="images/logo-2.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
 {% block javascripts %}{% endblock %}
 
         <div class="row">
-            <footer class="col-sm-12">
+            <footer class="col-sm-12" id="footer">
         <ul id="footer" class="col-sm-12">
         <a href="/contact"><li>Contactez-Nous</li></a>
         <a href="/mentionlegal"><li>Mentions Legales</li></a>
