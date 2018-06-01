@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+{% block title %}Hello !{% endblock %}
 
 {% block body %}
     <main>
@@ -10,11 +10,10 @@
         <div class="journee">
             <table>
                 <tr>
-                    <td>Russie</td>
-                    <td><img src="images/drapeau/rond/russie.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/arabieSaoudite.png"></td>
-                    <td>Arabie Saoudite</td>
+                    {% for coun in country %}
+                        <li>{{ coun.CouName }}</li>
+                        <li><img src="{{ coun.CouFlag }}" /></li>
+                    {% endfor %}
                 </tr>
             </table>
         </div>
