@@ -2,9 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\Stats;
 use App\Form\StatistiqueMatchType;
-use Symfony\Component\HttpFoundation\Response;
+use App\Form\TestType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,9 +15,9 @@ class StatistiquematchController extends AbstractController
      */
     public function index(Request $request)
     {
-        $stats = new StatistiqueMatchType();
+        $stats = new TestType();
 
-        $form = $this->createForm(StatistiqueMatchType::class);
+        $form = $this->createForm(TestType::class);
 
         $form->handleRequest($request);
 

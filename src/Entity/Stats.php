@@ -249,12 +249,12 @@ class Stats
         return $this;
     }
 
-    public function getCouIdId(): ?Countries
+    public function getCouIdId(): ?int
     {
         return $this->cou_id_id;
     }
 
-    public function setCouId(?Countries $cou_id_id): self
+    public function setCouId(?int $cou_id_id): self
     {
         $this->cou_id_id = $cou_id_id;
 
