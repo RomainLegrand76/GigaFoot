@@ -16,4 +16,5 @@ class DeckController extends Controller
             'controller_name' => 'DeckController',
         ]);
     }
+
 }
