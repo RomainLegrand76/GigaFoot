@@ -45,6 +45,10 @@ class InscriptionController extends Controller
         {
             $inscription = $formulaire->getData();
 
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($inscription);
+            $em->flush();
+
             return $this->redirectToRoute('connexion');
         }
 
