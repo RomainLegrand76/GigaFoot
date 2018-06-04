@@ -15,13 +15,28 @@ use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 
 class InscriptionController extends Controller
 {
+
     /**
      * @Route("/inscription", name="inscription")
      */
 
     public function formulaire(Request $requete)
     {
+
+        function generateRandomString($length) {
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $charactersLength = strlen($characters);
+            $randomString = '';
+            for ($i = 0; $i < $length; $i++) {
+                $randomString .= $characters[rand(0, $charactersLength - 1)];
+            }
+            return $randomString;
+        }
+
         $inscription = new Users();
+
+        $inscription->setUseToken(generateRandomString(255));
+        $inscription->setUseRole(0);
 
         $formulaire = $this -> createFormBuilder($inscription)
             ->add('use_pseudo', TextType::class)
@@ -44,6 +59,10 @@ class InscriptionController extends Controller
         if ($formulaire->isSubmitted() && $formulaire->isValid())
         {
             $inscription = $formulaire->getData();
+
+            $inscription->setUsePassword(password_hash($inscription->getUsePassword(), PASSWORD_DEFAULT));
+
+
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($inscription);

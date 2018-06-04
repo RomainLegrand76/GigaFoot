@@ -14,7 +14,7 @@ class TestType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('cou', EntityType::class)
+            ->add('cou', IntegerType::class)
             ->add('goal', IntegerType::class)
             ->add('stop', IntegerType::class)
             ->add('Envoyer', SubmitType::class)
