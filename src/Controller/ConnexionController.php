@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class ConnexionController extends Controller
 {
@@ -20,8 +21,8 @@ class ConnexionController extends Controller
         $connexion = new Users();
 
         $formulaire = $this -> createFormBuilder($connexion)
-            ->add('use_pseudo')
-            ->add('use_password',PasswordType::class)
+            ->add('use_pseudo',TextType::class, array("label" => 'Pseudo'))
+            ->add('use_password',PasswordType::class, array("label" => 'Mot de passe'))
             ->add('Connexion', SubmitType::class)
             ->getForm();
 
