@@ -51,6 +51,9 @@ class InscriptionController extends Controller
                 'type' => EmailType::class,
                 'first_options'  => array('label' => 'Mail'),
                 'second_options' => array('label' => 'Confirmation du mail'),))
+            ->add('envoyer',SubmitType::class, array(
+                'attr' => array("class" => "btn btn-success"),
+                'label' => 'Valider'))
             ->getForm();
 
         $formulaire->handleRequest($requete);
