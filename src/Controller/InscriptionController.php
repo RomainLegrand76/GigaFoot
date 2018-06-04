@@ -39,9 +39,9 @@ class InscriptionController extends Controller
         $inscription->setUseRole(0);
 
         $formulaire = $this -> createFormBuilder($inscription)
-            ->add('use_pseudo', TextType::class)
-            ->add('use_firstname',TextType::class)
-            ->add('use_lastname',TextType::class)
+            ->add('use_pseudo', TextType::class, array('label' => 'Pseudo'))
+            ->add('use_firstname',TextType::class, array('label' => 'Prénom'))
+            ->add('use_lastname',TextType::class, array('label' => 'Nom'))
             ->add('use_password', RepeatedType::class, array(
                 'type' => PasswordType::class,
                 'first_options'  => array('label' => 'Mot de passe'),
