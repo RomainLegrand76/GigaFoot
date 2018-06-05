@@ -19,17 +19,17 @@ class Users
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=45)
+     * @ORM\Column(type="string", length=255)
      */
     private $use_pseudo;
 
     /**
-     * @ORM\Column(type="string", length=45)
+     * @ORM\Column(type="string", length=255)
      */
     private $use_firstname;
 
     /**
-     * @ORM\Column(type="string", length=45)
+     * @ORM\Column(type="string", length=255)
      */
     private $use_lastname;
 
@@ -54,13 +54,13 @@ class Users
     private $use_role;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Choose", mappedBy="use_id")
+     * @ORM\OneToMany(targetEntity="App\Entity\Choose", mappedBy="user")
      */
-    private $choice;
+    private $chooses;
 
     public function __construct()
     {
-        $this->choice = new ArrayCollection();
+        $this->chooses = new ArrayCollection();
     }
 
     public function getId()
@@ -155,28 +155,28 @@ class Users
     /**
      * @return Collection|Choose[]
      */
-    public function getChoice(): Collection
+    public function getChooses(): Collection
     {
-        return $this->choice;
+        return $this->chooses;
     }
 
-    public function addChoice(Choose $choice): self
+    public function addChoose(Choose $choose): self
     {
-        if (!$this->choice->contains($choice)) {
-            $this->choice[] = $choice;
-            $choice->setUseId($this);
+        if (!$this->chooses->contains($choose)) {
+            $this->chooses[] = $choose;
+            $choose->setUser($this);
         }
 
         return $this;
     }
 
-    public function removeChoice(Choose $choice): self
+    public function removeChoose(Choose $choose): self
     {
-        if ($this->choice->contains($choice)) {
-            $this->choice->removeElement($choice);
+        if ($this->chooses->contains($choose)) {
+            $this->chooses->removeElement($choose);
             // set the owning side to null (unless already changed)
-            if ($choice->getUseId() === $this) {
-                $choice->setUseId(null);
+            if ($choose->getUser() === $this) {
+                $choose->setUser(null);
             }
         }
 
