@@ -346,6 +346,28 @@ html, body{
 }
 
 /* Fin page Accueil */
+
+/* Page erreur */
+
+#img404{
+
+width: 100%;
+
+
+}
+#imgErreur{
+    width: 100%;
+}
+
+#containerErreur{
+    display: flex;
+    justify-content: center !important;
+    text-align: center !important;
+    padding-top: 10%;
+}
+
+/* Fin page erreur */
+
 /*header*/
 
 
