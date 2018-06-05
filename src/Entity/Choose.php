@@ -24,19 +24,19 @@ class Choose
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private $cho_points;
+    private $cho_point;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Countries", inversedBy="choices")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Countries", inversedBy="chooses")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $cou_id;
+    private $country;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Users", inversedBy="choice")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Users", inversedBy="chooses")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $use_id;
+    private $user;
 
     public function getId()
     {
@@ -55,38 +55,38 @@ class Choose
         return $this;
     }
 
-    public function getChoPoints(): ?int
+    public function getChoPoint(): ?int
     {
-        return $this->cho_points;
+        return $this->cho_point;
     }
 
-    public function setChoPoints(?int $cho_points): self
+    public function setChoPoint(?int $cho_point): self
     {
-        $this->cho_points = $cho_points;
+        $this->cho_point = $cho_point;
 
         return $this;
     }
 
-    public function getCouId(): ?Countries
+    public function getCountry(): ?Countries
     {
-        return $this->cou_id;
+        return $this->country;
     }
 
-    public function setCouId(?Countries $cou_id): self
+    public function setCountry(?Countries $country): self
     {
-        $this->cou_id = $cou_id;
+        $this->country = $country;
 
         return $this;
     }
 
-    public function getUseId(): ?Users
+    public function getUser(): ?Users
     {
-        return $this->use_id;
+        return $this->user;
     }
 
-    public function setUseId(?Users $use_id): self
+    public function setUser(?Users $user): self
     {
-        $this->use_id = $use_id;
+        $this->user = $user;
 
         return $this;
     }

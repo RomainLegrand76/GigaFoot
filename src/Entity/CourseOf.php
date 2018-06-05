@@ -19,57 +19,57 @@ class CourseOf
     /**
      * @ORM\Column(type="string", length=5, nullable=true)
      */
-    private $score;
+    private $cof_score;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Countries", inversedBy="courseOf")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Countries", inversedBy="courseOfs")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $cou_id;
+    private $country;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Match", inversedBy="courseOf")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Rencontre", inversedBy="courseOfs")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $mat_id;
+    private $rencontre;
 
     public function getId()
     {
         return $this->id;
     }
 
-    public function getScore(): ?string
+    public function getCofScore(): ?string
     {
-        return $this->score;
+        return $this->cof_score;
     }
 
-    public function setScore(?string $score): self
+    public function setCofScore(?string $cof_score): self
     {
-        $this->score = $score;
+        $this->cof_score = $cof_score;
 
         return $this;
     }
 
-    public function getCouId(): ?Countries
+    public function getCountry(): ?Countries
     {
-        return $this->cou_id;
+        return $this->country;
     }
 
-    public function setCouId(?Countries $cou_id): self
+    public function setCountry(?Countries $country): self
     {
-        $this->cou_id = $cou_id;
+        $this->country = $country;
 
         return $this;
     }
 
-    public function getMatId(): ?Match
+    public function getRencontre(): ?Rencontre
     {
-        return $this->mat_id;
+        return $this->rencontre;
     }
 
-    public function setMatId(?Match $mat_id): self
+    public function setRencontre(?Rencontre $rencontre): self
     {
-        $this->mat_id = $mat_id;
+        $this->rencontre = $rencontre;
 
         return $this;
     }
