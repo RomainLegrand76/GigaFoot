@@ -1,6 +1,12 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Hello {% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mot de passe perdu{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <script src="{{ asset('build/app.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+</head>
 
 {% block body %}
     <body id="bodyMdpPerdu">
