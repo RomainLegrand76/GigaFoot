@@ -1,186 +1,189 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello !{% endblock %}
+{% block title %}Deck{% endblock %}
 
 {% block body %}
-    <main>
+    <body id="bodyDeck">
+    <main id="mainDeck">
         <div id="containerAccordion">
-    <div id="accordion" class="offset-sm-3">
-        <h3>Jour 1</h3>
-        <div class="journee">
-            <table>
-                <tr>
-                    {% for coun in country %}
-                        <li>{{ coun.CouName }}</li>
-                        <li><img src="{{ coun.CouFlag }}" /></li>
-                    {% endfor %}
-                </tr>
-            </table>
-        </div>
-        <h3>Jour 2</h3>
-        <div class="journee">
-            <table>
-                <tr>
-                    <td>Egypte</td>
-                    <td><img src="images/drapeau/rond/egypte.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/uruguay.png"></td>
-                    <td>Uruguay</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-        <h3>Jour 3</h3>
-        <div class="journee">
-            <table>
-                <tr>
-                    <td></td>
-                    <td><td><img src="images/drapeau/rond/.png"></td></td>
-                    <td>VS</td>
-                    <td><td><img src="images/drapeau/rond/.png"></td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Egypte</td>
-                    <td><img src="images/drapeau/rond/egypte.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/uruguay.png"></td>
-                    <td>Uruguay</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-        <h3>Jour 4</h3>
-        <div class="journee">
-            <table>
-                <tr>
-                    <td></td>
-                    <td><td><img src="images/drapeau/rond/.png"></td></td>
-                    <td>VS</td>
-                    <td><td><img src="images/drapeau/rond/.png"></td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-        <h3>Jour 5</h3>
-        <div class="journee">
-            <table>
-                <tr>
-                    <td></td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><td><img src="images/drapeau/rond/.png"></td></td>
-                    <td>VS</td>
-                    <td><td><img src="images/drapeau/rond/.png"></td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-        <h3>Jour 6</h3>
-        <div class="journee">
-            <table>
-                <tr>
-                    <td></td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><td><img src="images/drapeau/rond/.png"></td></td>
-                    <td>VS</td>
-                    <td><td><img src="images/drapeau/rond/.png"></td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-        <h3>Jour 7</h3>
-        <div class="journee">
-            <table>
-                <tr>
-                    <td></td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td>VS</td>
-                    <td><img src="images/drapeau/rond/.png"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><td><img src="images/drapeau/rond/.png"></td></td>
-                    <td>VS</td>
-                    <td><td><img src="images/drapeau/rond/.png"></td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-    </div>
+            <div id="accordion" class="offset-sm-3">
+                <h3>Jour 1</h3>
+                <div class="journee">
+                    <table>
+                        <tr>
+                            {% for coun in country %}
+                                <li>{{ coun.CouName }}</li>
+                                <li><img src="{{ coun.CouFlag }}" /></li>
+                            {% endfor %}
+                        </tr>
+                    </table>
+                </div>
+                <h3>Jour 2</h3>
+                <div class="journee">
+                    <table>
+                        <tr>
+                            <td>Egypte</td>
+                            <td><img src="images/drapeau/rond/egypte.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/uruguay.png"></td>
+                            <td>Uruguay</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <h3>Jour 3</h3>
+                <div class="journee">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td><td><img src="images/drapeau/rond/.png"></td></td>
+                            <td>VS</td>
+                            <td><td><img src="images/drapeau/rond/.png"></td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Egypte</td>
+                            <td><img src="images/drapeau/rond/egypte.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/uruguay.png"></td>
+                            <td>Uruguay</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <h3>Jour 4</h3>
+                <div class="journee">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td><td><img src="images/drapeau/rond/.png"></td></td>
+                            <td>VS</td>
+                            <td><td><img src="images/drapeau/rond/.png"></td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <h3>Jour 5</h3>
+                <div class="journee">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><td><img src="images/drapeau/rond/.png"></td></td>
+                            <td>VS</td>
+                            <td><td><img src="images/drapeau/rond/.png"></td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <h3>Jour 6</h3>
+                <div class="journee">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><td><img src="images/drapeau/rond/.png"></td></td>
+                            <td>VS</td>
+                            <td><td><img src="images/drapeau/rond/.png"></td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <h3>Jour 7</h3>
+                <div class="journee">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td>VS</td>
+                            <td><img src="images/drapeau/rond/.png"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><td><img src="images/drapeau/rond/.png"></td></td>
+                            <td>VS</td>
+                            <td><td><img src="images/drapeau/rond/.png"></td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
+    </body>
+
 {% endblock %}
