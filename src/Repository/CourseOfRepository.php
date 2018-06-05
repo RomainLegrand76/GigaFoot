@@ -47,4 +47,17 @@ class CourseOfRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function findOneByIdJoinedToCategory($date)
+    {
+        return $this->createQueryBuilder('co')
+            ->innerJoin('co.country', 'c')
+            ->addSelect('c')
+            ->innerJoin('co.rencontre', 'r')
+            ->addSelect('r')
+            ->andWhere('r.ren_date = :date')
+            ->setParameter('date', $date)
+            ->getQuery()
+            ->getResult();
+    }
 }
