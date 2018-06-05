@@ -1,4 +1,4 @@
-/* Font PT_Sans (Texte) */
+/* --------------------------------------------------Font PT_Sans (Texte) --------------------------------------------------*/
 @font-face {
     font-family: 'PT_Sans-Web-Bold';
     src: url(../../public/fonts/PT_Sans/PT_Sans-Web-Bold.ttf)format('truetype');
@@ -19,26 +19,26 @@
     src: url(../../public/fonts/PT_Sans/PT_Sans-Web-Regular.ttf)format('truetype');
 }
 
-/* Font expressway */
+/* --------------------------------------------------Font expressway --------------------------------------------------*/
 @font-face {
     font-family: 'expressway';
     src: url(../../public/fonts/expressway/expressway.ttf)format('truetype');
 }
-/* Font Secour de base */
-/* times et georgia */
+/* --------------------------------------------------Font Secour de base --------------------------------------------------*/
+/* --------------------------------------------------Times et Georgia --------------------------------------------------*/
 
-/* Font Import (si necessaire) */
+/* --------------------------------------------------Font Import (si necessaire) --------------------------------------------------*/
 /*@import {url("https://????" rel="stylesheet");
 }*/
 
-/* Typo definie pour H1 et H2 */
+/* --------------------------------------------------Typo définie pour H1 et H2 --------------------------------------------------*/
 h1, h2 {
     font-family: "expressway", Arial, Georgia ;
     /*font-style: italic;
     font-weight: normal;*/
 }
 
-/* Typo definie pour P */
+/* --------------------------------------------------Typo definie pour P --------------------------------------------------*/
 P {
     font-family: "PT_Sans-Web-Regular", Arial, Georgia ;
     /*font-style: italic;
@@ -47,7 +47,7 @@ P {
 }
 
 
-/* Body */
+/* --------------------------------------------------Body --------------------------------------------------*/
 html, body{
    /* font-size: 100%;
     background: #ffffff;
@@ -61,9 +61,9 @@ html, body{
     margin:0;
 
 }
-/* Fin Body */
+/* --------------------------------------------------Fin Body --------------------------------------------------*/
 
-/* Page Mention Legale */
+/* --------------------------------------------------Page Mention Legale --------------------------------------------------*/
 #mainMentionLegale{
     margin-top: 5%;
     margin-bottom: auto;
@@ -102,9 +102,9 @@ html, body{
 }
 
 
-/* Fin Page Mention Legale */
+/* --------------------------------------------------Fin Page Mention Legale --------------------------------------------------*/
 
-/* Page Contact */
+/* --------------------------------------------------Page Contact --------------------------------------------------*/
 
 #mainContact{
     margin-top: 5%;
@@ -176,9 +176,9 @@ html, body{
 }
 
 
-/* Fin Page Contact */
+/* --------------------------------------------------Fin Page Contact --------------------------------------------------*/
 
-/* Page Règles */
+/* --------------------------------------------------Page Règles --------------------------------------------------*/
 
 #mainRegles {
     margin-top: 5%;
@@ -246,9 +246,9 @@ html, body{
 
 }
 
-/* Fin Page Règles */
+/* -------------------------------------------------- Fin Page Règles -------------------------------------------------- */
 
-/* Page Connection */
+/* -------------------------------------------------- Page Connection --------------------------------------------------*/
 
 #bodyConnect
 {
@@ -290,9 +290,9 @@ html, body{
     margin-top: 15%;
 }
 
-/* Fin page connection */
+/* --------------------------------------------------Fin page connection --------------------------------------------------*/
 
-/* Page MdpPerdu */
+/* --------------------------------------------------Page MdpPerdu --------------------------------------------------*/
 
 #containerMdpPerdu{
     -moz-box-shadow: 15px 15px 15px 15px #000000;
@@ -326,9 +326,9 @@ html, body{
 }
 
 
-/* Fin Page MdpPerdu */
+/* --------------------------------------------------Fin Page MdpPerdu --------------------------------------------------*/
 
-/* Page Accueil */
+/* --------------------------------------------------Page Accueil --------------------------------------------------*/
 
 #mainAccueil
 {
@@ -345,11 +345,30 @@ html, body{
     background-color: rgb(43, 97, 96);
 }
 
-/* Fin page Accueil */
-/*header*/
+/* --------------------------------------------------Fin page Accueil --------------------------------------------------*/
+
+/* --------------------------------------------------Page erreur --------------------------------------------------*/
+
+#img404{
+
+width: 100%;
 
 
-/*header*/
+}
+#imgErreur{
+    width: 100%;
+}
+
+#containerErreur{
+    display: flex;
+    justify-content: center !important;
+    text-align: center !important;
+    padding-top: 10%;
+}
+
+/* --------------------------------------------------Fin page erreur --------------------------------------------------*/
+
+/*-------------------------------------------------- Page header--------------------------------------------------*/
 
 header{
     background-image: url("../../public/images/fond.jpg");
@@ -375,9 +394,9 @@ header{
     justify-content: space-around;
 }
 
-/* Fin Page header */
+/* --------------------------------------------------Fin Page header --------------------------------------------------*/
 
-/* Footer*/
+/* --------------------------------------------------Page Footer--------------------------------------------------*/
 
 #footer{
     display: flex;
@@ -406,14 +425,14 @@ a:hover{
     color: white;
 }
 
-/*fin du Footer*/
+/*-------------------------------------------------FIn du Footer--------------------------------------------------*/
 
-/* Debut accordion deck*/
+/* --------------------------------------------------Debut accordion deck--------------------------------------------------*/
 
 #containerAccordion{
     width: 40%;
 }
 
-/*Fin Accordion deck*/
+/*--------------------------------------------------Fin Accordion deck--------------------------------------------------*/
 
 

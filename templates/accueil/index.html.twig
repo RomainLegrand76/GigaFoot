@@ -1,8 +1,17 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Accueil{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <script src="{{ asset('build/app.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+</head>
 
-{% block title %}Accueil{% endblock %}
+
 
 {% block body %}
+    <body id="">
     <div id="bodyAccueil">
         <main id="mainAccueil" class="container">
             <div class="row">
@@ -33,4 +42,5 @@
             </div>
         </main>
     </div>
+    </body>
 {% endblock %}

@@ -15,12 +15,11 @@ class Countries
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @ORM\OneToMany(targetEntity="App\Entity\Stats", mappedBy="countries")
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=20)
+     * @ORM\Column(type="string", length=255)
      */
     private $cou_name;
 
@@ -30,25 +29,25 @@ class Countries
     private $cou_flag;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Stats", mappedBy="cou_id")
+     * @ORM\OneToMany(targetEntity="App\Entity\Stats", mappedBy="country")
      */
-    private $stat;
+    private $stats;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Choose", mappedBy="cou_id")
+     * @ORM\OneToMany(targetEntity="App\Entity\Choose", mappedBy="country")
      */
-    private $choices;
+    private $chooses;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\CourseOf", mappedBy="cou_id")
+     * @ORM\OneToMany(targetEntity="App\Entity\CourseOf", mappedBy="country")
      */
-    private $courseOf;
+    private $courseOfs;
 
     public function __construct()
     {
-        $this->stat = new ArrayCollection();
-        $this->choices = new ArrayCollection();
-        $this->courseOf = new ArrayCollection();
+        $this->stats = new ArrayCollection();
+        $this->chooses = new ArrayCollection();
+        $this->courseOfs = new ArrayCollection();
     }
 
     public function getId()
@@ -83,16 +82,16 @@ class Countries
     /**
      * @return Collection|Stats[]
      */
-    public function getStat(): Collection
+    public function getStats(): Collection
     {
-        return $this->stat;
+        return $this->stats;
     }
 
     public function addStat(Stats $stat): self
     {
-        if (!$this->stat->contains($stat)) {
-            $this->stat[] = $stat;
-            $stat->setCouId($this);
+        if (!$this->stats->contains($stat)) {
+            $this->stats[] = $stat;
+            $stat->setCountry($this);
         }
 
         return $this;
@@ -100,11 +99,11 @@ class Countries
 
     public function removeStat(Stats $stat): self
     {
-        if ($this->stat->contains($stat)) {
-            $this->stat->removeElement($stat);
+        if ($this->stats->contains($stat)) {
+            $this->stats->removeElement($stat);
             // set the owning side to null (unless already changed)
-            if ($stat->getCouId() === $this) {
-                $stat->setCouId(null);
+            if ($stat->getCountry() === $this) {
+                $stat->setCountry(null);
             }
         }
 
@@ -114,28 +113,28 @@ class Countries
     /**
      * @return Collection|Choose[]
      */
-    public function getChoices(): Collection
+    public function getChooses(): Collection
     {
-        return $this->choices;
+        return $this->chooses;
     }
 
-    public function addChoice(Choose $choice): self
+    public function addChoose(Choose $choose): self
     {
-        if (!$this->choices->contains($choice)) {
-            $this->choices[] = $choice;
-            $choice->setCouId($this);
+        if (!$this->chooses->contains($choose)) {
+            $this->chooses[] = $choose;
+            $choose->setCountry($this);
         }
 
         return $this;
     }
 
-    public function removeChoice(Choose $choice): self
+    public function removeChoose(Choose $choose): self
     {
-        if ($this->choices->contains($choice)) {
-            $this->choices->removeElement($choice);
+        if ($this->chooses->contains($choose)) {
+            $this->chooses->removeElement($choose);
             // set the owning side to null (unless already changed)
-            if ($choice->getCouId() === $this) {
-                $choice->setCouId(null);
+            if ($choose->getCountry() === $this) {
+                $choose->setCountry(null);
             }
         }
 
@@ -145,16 +144,16 @@ class Countries
     /**
      * @return Collection|CourseOf[]
      */
-    public function getCourseOf(): Collection
+    public function getCourseOfs(): Collection
     {
-        return $this->courseOf;
+        return $this->courseOfs;
     }
 
     public function addCourseOf(CourseOf $courseOf): self
     {
-        if (!$this->courseOf->contains($courseOf)) {
-            $this->courseOf[] = $courseOf;
-            $courseOf->setCouId($this);
+        if (!$this->courseOfs->contains($courseOf)) {
+            $this->courseOfs[] = $courseOf;
+            $courseOf->setCountry($this);
         }
 
         return $this;
@@ -162,11 +161,11 @@ class Countries
 
     public function removeCourseOf(CourseOf $courseOf): self
     {
-        if ($this->courseOf->contains($courseOf)) {
-            $this->courseOf->removeElement($courseOf);
+        if ($this->courseOfs->contains($courseOf)) {
+            $this->courseOfs->removeElement($courseOf);
             // set the owning side to null (unless already changed)
-            if ($courseOf->getCouId() === $this) {
-                $courseOf->setCouId(null);
+            if ($courseOf->getCountry() === $this) {
+                $courseOf->setCountry(null);
             }
         }
 

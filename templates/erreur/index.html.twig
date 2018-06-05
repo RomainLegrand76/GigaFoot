@@ -1,23 +1,28 @@
 {% block body %}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
-    {% block stylesheets %}{% endblock %}
-    <script src="{{ asset('build/app.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
-</head>
-<body>
-<div class="container-fluid">
-       <div class="row">
-        <div class="offset-sm-2">
-    <img src="/images/erreur.png">
-            <h1>Ooops page non trouver !!!!</h1>
-            <h4>Pour retourner sur le terrain<a href="/deck"><button>Clique ici</button></a></h4>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <script src="{{ asset('build/app.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+    </head>
+    <body id="bodyErreur">
+    <main id="mainErreur">
+        <div class="container-fluid" id="containerErreur">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="imgErreur">
+                        <img src="/images/erreur.png" id="img404">
+                    </div>
+                    <h1>Ooops page non trouver !!!!</h1><h5>Le serveur n'a rien trouvé qui corresponde à l'adresse (URL) demandée.<br>
+                        Cela signifie que l'URL que vous avez tapée ou cliquée est mauvaise ou obsolète et ne correspond à aucun document existant sur le serveur.</h5>
+                    <h4>Pour retourner sur le terrain<br><a href="/deck"><button>Cliquez ici</button></a></h4>
+                </div>
+            </div>
         </div>
-       </div>
-</div>
-</body>
-</html>
+    </main>
+    </body>
+    </html>
 {% endblock %}

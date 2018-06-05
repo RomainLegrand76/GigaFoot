@@ -49,12 +49,12 @@ class Stats
     /**
      * @ORM\Column(type="integer")
      */
-    private $sta_yallowcardboard;
+    private $sta_yellowcardboard;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $sta_redcarboard;
+    private $sta_redcardboard;
 
     /**
      * @ORM\Column(type="integer")
@@ -82,11 +82,10 @@ class Stats
     private $sta_date;
 
     /**
-     * @ORM\Column(type="integer")
      * @ORM\ManyToOne(targetEntity="App\Entity\Countries", inversedBy="stats")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $cou_id_id;
+    private $country;
 
     public function getId()
     {
@@ -165,26 +164,26 @@ class Stats
         return $this;
     }
 
-    public function getStaYallowcardboard(): ?int
+    public function getStaYellowcardboard(): ?int
     {
-        return $this->sta_yallowcardboard;
+        return $this->sta_yellowcardboard;
     }
 
-    public function setStaYallowcardboard(int $sta_yallowcardboard): self
+    public function setStaYellowcardboard(int $sta_yellowcardboard): self
     {
-        $this->sta_yallowcardboard = $sta_yallowcardboard;
+        $this->sta_yellowcardboard = $sta_yellowcardboard;
 
         return $this;
     }
 
-    public function getStaRedcarboard(): ?int
+    public function getStaRedcardboard(): ?int
     {
-        return $this->sta_redcarboard;
+        return $this->sta_redcardboard;
     }
 
-    public function setStaRedcarboard(int $sta_redcarboard): self
+    public function setStaRedcardboard(int $sta_redcardboard): self
     {
-        $this->sta_redcarboard = $sta_redcarboard;
+        $this->sta_redcardboard = $sta_redcardboard;
 
         return $this;
     }
@@ -249,14 +248,14 @@ class Stats
         return $this;
     }
 
-    public function getCouIdId(): ?int
+    public function getCountry(): ?Countries
     {
-        return $this->cou_id_id;
+        return $this->country;
     }
 
-    public function setCouId(?int $cou_id_id): self
+    public function setCountry(?Countries $country): self
     {
-        $this->cou_id_id = $cou_id_id;
+        $this->country = $country;
 
         return $this;
     }

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>{% block title %}Connexion{% endblock %}</title>
     {% block stylesheets %}{% endblock %}
     <script src="{{ asset('build/app.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('build/app.css') }}">
@@ -10,8 +10,8 @@
 
 {% block body %}
     <body id="bodyConnect">
-    <div>
-        <main class="row">
+    <main id="mainConnexion">
+        <div class="row">
             <div class="offset-lg-5	 col-lg-2" id="containerConnect">
                 <div  id="divConnect">
                     <img src="images/Logo-2.png">
@@ -24,7 +24,7 @@
                 <br>
                 <a href="/inscription"><input  type="button" name="bouttonInscription" class="btn btn-info" id="bouttonInscription" value="Inscription" ></a>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
     </body>
 {% endblock %}
