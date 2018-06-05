@@ -27,7 +27,7 @@ class DeckController extends Controller
 
     public function show()
     {
-        $country = $this->getDoctrine()
+       $country = $this->getDoctrine()
             ->getRepository(Countries::class)
             ->findAll();
 
