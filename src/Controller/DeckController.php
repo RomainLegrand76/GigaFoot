@@ -15,19 +15,18 @@ class DeckController extends Controller
     /**
      * @Route("/deck", name="deck")
      */
-    public function index($date)
+    public function index()
     {
 
         $country = $this->getDoctrine()
-            ->getRepository(CourseOf::class)
-            ->findOneBy($date);
+            ->getRepository(Countries::class)
+            ->findAll();
 
 
 
 
-        /*return $this->render('deck/index.html.twig', [
-            'controller_name' => 'DeckController',
-        ]);*/
+        return $this->render('deck/index.html.twig', ['country' => $country]);
+
     }
 
   /*  public function show()
