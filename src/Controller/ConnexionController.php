@@ -23,7 +23,8 @@ class ConnexionController extends Controller
         $formulaire = $this -> createFormBuilder($connexion)
             ->add('use_pseudo',TextType::class, array("label" => 'Pseudo'))
             ->add('use_password',PasswordType::class, array("label" => 'Mot de passe'))
-            ->add('Connexion', SubmitType::class)
+            ->add('Connexion', SubmitType::class, array('attr' => array("class" => "btn btn-success"),
+                'label' => 'Connexion'))
             ->getForm();
 
         $formulaire->handleRequest($requete);
