@@ -13,11 +13,13 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class ConnexionController extends Controller
 {
+
     /**
      * @Route("/connexion", name="connexion")
      */
     public function index(Request $requete)
     {
+
         $connexion = new Users();
 
         $formulaire = $this -> createFormBuilder($connexion)
