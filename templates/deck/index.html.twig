@@ -3,15 +3,17 @@
 {% block title %}Deck{% endblock %}
 
 {% block body %}
-    <body id="bodyDeck">
-    <main id="mainDeck">
-        <div id="containerAccordion">
-            <div id="accordion" class="offset-sm-3">
+    <main id="mainDeck" class="row">
+        <div id="containerAccordion" class="offset-sm-3 col-sm-6">
+            <div id="accordion">
                 <h3>Jour 1</h3>
                 <div class="journee">
                     <table>
                         <tr>
-
+                            {% for coun in country %}
+                                <li>{{ coun.CouName }}</li>
+                                <li><img src="{{ coun.CouFlag }}" /></li>
+                            {% endfor %}
                         </tr>
                     </table>
                 </div>
@@ -181,6 +183,6 @@
             </div>
         </div>
     </main>
-    </body>
+
 
 {% endblock %}

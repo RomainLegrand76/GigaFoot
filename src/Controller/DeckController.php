@@ -18,7 +18,7 @@ class DeckController extends Controller
 
       /*  $country = $this->getDoctrine()
             ->getRepository(CourseOf::class)
-            ->findOneBy($date);*/
+            ->findOneBy($date);
 
         $match = $this->getDoctrine()
             ->getRepository(CourseOf::class)
@@ -26,7 +26,7 @@ class DeckController extends Controller
 
         var_dump($match);
 
-        return $this->render('deck/index.html.twig');
+        return $this->render('deck/index.html.twig');*/
 
 
 
