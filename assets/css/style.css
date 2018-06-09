@@ -252,8 +252,7 @@ html, body{
 
 /* -------------------------------------------------- Page Connection --------------------------------------------------*/
 
-#bodyConnect
-{
+#bodyConnect {
     background-image: url("../../public/images/fondconnexion.jpg");
     background-color: black;
     background-size: 100%;
@@ -262,34 +261,55 @@ html, body{
     margin-top: auto;
     margin-bottom: auto;
 }
-#titreConnect
-{
+#titreConnect {
     text-align: center;
 }
-#formConnect
-{
+#formConnect {
     display:flex;
     justify-content: center;
     flex-direction: column;
 }
-.inputConnect
-{
+.inputConnect {
     margin-top: 3%;
 }
 
 
-#rappelConnect
-{
+#rappelConnect {
     text-align: left;
 }
-#divConnect
-{
+#divConnect {
     display: flex;
     justify-content: center;
 }
-#containerConnect
-{
+#containerConnect {
     margin-top: 15%;
+
+}
+#form_Connexion{
+    width: 100% !important;
+    margin-top: 5%;
+}
+#MotDePassePerdu{
+
+    width: 100% !important;
+    margin-top: 5%;
+}
+#Inscription{
+
+    width: 100% !important;
+    margin-top: 5%;
+}
+#bouttonInscription{
+    width: 100% !important;
+}
+#bouttonMotDePassePerdu{
+    width: 100% !important;
+}
+#form_use_pseudo{
+    width: 100% !important;
+}
+#form_use_password{
+    width: 100% !important;
 }
 
 /* --------------------------------------------------Fin page connection --------------------------------------------------*/

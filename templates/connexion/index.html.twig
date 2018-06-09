@@ -17,14 +17,20 @@
                     <img src="images/Logo-2.png">
                 </div>
                 <h4 id="titreconnect">Le match commence ici !</h4>
-                {{ form_start(connexion) }}
-                {{ form_widget(connexion) }}
-                {{ form_end(connexion) }}
-                <a href="/mdpoublier"><input  type="button" name="bouttonMotDePassePerdu" class="btn btn-warning" id="bouttonMotDePassePerdu" value="Mot de passe perdu" </a>
-                <br>
-                <a href="/inscription"><input  type="button" name="bouttonInscription" class="btn btn-info" id="bouttonInscription" value="Inscription" ></a>
+                <div id="connexionFormulaire">
+                    {{ form_start(connexion) }}
+                    {{ form_widget(connexion) }}
+                    {{ form_end(connexion) }}
+                </div>
+                <div id="MotDePassePerdu">
+                    <a href="/mdpoublier"><input  id="bouttonMotDePassePerdu" type="button" name="bouttonMotDePassePerdu" class="btn btn-warning" value="Mot de passe perdu" </a>
+                </div>
+                <div id="Inscription">
+                    <a href="/inscription"><input  id="bouttonInscription" type="button" name="bouttonInscription" class="btn btn-info" value="Inscription" ></a>
+                </div>
             </div>
         </div>
+
     </main>
     </body>
 {% endblock %}
