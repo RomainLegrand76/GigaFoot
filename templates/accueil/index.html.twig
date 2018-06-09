@@ -11,36 +11,33 @@
 
 
 {% block body %}
-    <body id="">
-    <div id="bodyAccueil">
-        <main id="mainAccueil" class="container">
-            <div class="row">
-                <div class="offset-lg-5 col-lg-2">
-                    <img src="images/logoblanc.png">
-                </div>
+    <body id="bodyAccueil">
+    <main id="mainAccueil" class="container">
+        <div id="divAccueilRow" class="row">
+            <div class="offset-lg-5 col-lg-2">
+                <img id="imgAccueil" src="images/logoblanc.png">
+            </div>
+            <div id="articleAccueil">
+                <h2>Qu'est que GigaFoot</h2>
                 <div>
-                    <article>
-                        <h2>Qu'est que GigaFoot</h2>
-                        <p>
-                            GigaFoot est un site qui vous permet de suivre la coupe du monde en vous amusants !
-                        </p>
-                    </article>
-                    <article>
-                        <h2>Le Principe</h2>
-                        <ul>
-                            <li>32 équipes disponibles</li>
-                            <li>25 soirées sur lesquelles parier</li>
-                            <li>25 semaines intenses</li>
-                            <li>7 équipes par semaine</li>
-                            <li>1 vainqueur</li>
-                        </ul>
-                    </article>
+                    GigaFoot est un site qui vous permet de suivre la coupe du monde en vous amusants !
                 </div>
+                <div><br></div>
+                <h2>Le Principe</h2>
+                <div><br></div>
                 <div>
-                   <a href="/connexion"><input  type="button" name="bouttonAccueil" class="btn btn-success" id="bouttonAccueil" value="Connexion / Inscription" ></a>
+                        <li>32 équipes disponibles</li>
+                        <li>25 soirées sur lesquelles parier</li>
+                        <li>25 semaines intenses</li>
+                        <li>7 équipes par semaine</li>
+                        <li>1 vainqueur</li>
+                </div>
+                <div><br></div>
+                <div id="accueilBtn">
+                    <a href="/connexion"><input  type="button" name="bouttonAccueil" class="btn btn-success" id="bouttonAccueil" value="Connexion / Inscription" ></a>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
     </body>
 {% endblock %}
