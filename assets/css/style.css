@@ -39,7 +39,7 @@ h1, h2, h3 {
 }
 
 /* --------------------------------------------------Typo definie pour P --------------------------------------------------*/
-P, article, h4, h5, h6 {
+P, article, h4, h5, h6, label, input {
     font-family: "PT_Sans-Web-Regular", Arial, Georgia ;
     /*font-style: italic;
     font-weight: normal;*/
@@ -301,9 +301,12 @@ html, body{
 }
 #bouttonInscription{
     width: 100% !important;
+    text-align: center !important;
 }
 #bouttonMotDePassePerdu{
     width: 100% !important;
+    color: white;
+    text-align: center !important;
 }
 #form_use_pseudo{
     width: 100% !important;
@@ -334,9 +337,6 @@ html, body{
     justify-content: center;
     flex-direction: column;
 }
-
-
-
 #rappelConnect {
     text-align: left;
 }
@@ -384,8 +384,11 @@ html, body{
 /* --------------------------------------------------Page MdpPerdu --------------------------------------------------*/
 
 #containerMdpPerdu{
-    -moz-box-shadow: 15px 15px 15px 15px #000000;
-    -webkit-box-shadow: 15px 15px 15px 15px #000000;
+    /*-moz-box-shadow: 15px 15px 15px 15px #000000;
+    -webkit-box-shadow: 15px 15px 15px 15px #000000;*/
+    /*border-style: solid;*/
+    /*border-color: red;*/
+    margin-top: 15%;
 
 }
 #bodyMdpPerdu{
@@ -396,13 +399,11 @@ html, body{
     background-repeat: no-repeat;
     margin-top: auto;
     margin-bottom: auto;
-
 }
-
-#mdpPerdu{
+#divMdpPerdu{
     display:flex;
     justify-content: center;
-    flex-direction: column;
+
 }
 #mdpPerduTitre{
     text-align: center;
@@ -411,9 +412,29 @@ html, body{
 #mdpPerduFormulaire{
     display: flex;
     justify-content: center !important;
-    text-align: center !important;
 }
+#mdp_oublier_envoyer{
+    width: 100%;
+    margin-top: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: white;
+    background-color: #28a745;
+    border-color: #28a745;
+    border-style: solid 1px;
+    border-radius: 0.25em;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
 
+
+}
+#mdp_oublier_email{
+    width: 100%;
+}
+label{
+    width: 100%;
+}
 
 /* --------------------------------------------------Fin Page MdpPerdu --------------------------------------------------*/
 
