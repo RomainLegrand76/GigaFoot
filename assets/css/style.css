@@ -314,6 +314,73 @@ html, body{
 
 /* --------------------------------------------------Fin page connection --------------------------------------------------*/
 
+/* -------------------------------------------------- Page Inscription --------------------------------------------------*/
+
+#bodyInscription{
+    background-image: url("../../public/images/fondconnexion.jpg");
+    background-color: black;
+    background-size: 100%;
+    color : white;
+    background-repeat: no-repeat;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#titreInscription {
+    text-align: center;
+}
+#inscriptionFormulaire{
+    width: 100% !important;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+#rappelConnect {
+    text-align: left;
+}
+#divInscription {
+    display: flex;
+    justify-content: center;
+}
+#containerInscription {
+    /*border-style: solid;*/
+    /*border-color: red;*/
+    margin-top: 15%;
+}
+#form_envoyer{
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 0%;
+}
+#annuler{
+    width: 100% !important;
+    margin-top: 5%;
+}
+#boutonAnnuler{
+    width: 100% !important;
+}
+#form_use_firstname{
+    width: 100%;
+}
+#form_use_lastname{
+    width: 100%;
+}
+#form_use_password_first{
+    width: 100%;
+}
+#form_use_password_second{
+    width: 100%;
+}
+#form_use_mail_first{
+    width: 100%;
+}
+#form_use_mail_second{
+    width: 100%;
+}
+/* --------------------------------------------------Fin page Inscription --------------------------------------------------*/
+
 /* --------------------------------------------------Page MdpPerdu --------------------------------------------------*/
 
 #containerMdpPerdu{

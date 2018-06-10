@@ -9,20 +9,21 @@
 </head>
 
 {% block body %}
-    <body id="bodyConnect">
+    <body id="bodyInscription">
     <main id="mainInscription">
         <div class="row">
-            <div class="offset-lg-5	 col-lg-2" id="containerConnect">
-                <div  id="divConnect">
+            <div class="offset-lg-5	 col-lg-2" id="containerInscription">
+                <div  id="divInscription">
                     <img src="images/Logo-2.png">
                 </div>
-                {{ form_start(inscription) }}
-                {{ form_widget(inscription) }}
-                {{ form_end(inscription) }}
-                <br>
-                <a href="/connexion"><input  type="button" name="bouttonAnnuler"
-                                             class="btn btn-warning" id="bouttonAnnuler"
-                                             value="Annuler" ></a>
+                <div id="inscriptionFormulaire">
+                    {{ form_start(inscription) }}
+                    {{ form_widget(inscription) }}
+                    {{ form_end(inscription) }}
+                </div>
+                <div id="annuler">
+                    <a href="/connexion"><input  type="button" name="boutonAnnuler" class="btn btn-warning" id="boutonAnnuler" value="Annuler" ></a>
+                </div>
             </div>
         </div>
     </main>
