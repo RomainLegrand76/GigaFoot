@@ -360,6 +360,8 @@ html, body{
 }
 #boutonAnnuler{
     width: 100% !important;
+    color: white;
+    text-align: center !important;
 }
 #form_use_firstname{
     width: 100%;
