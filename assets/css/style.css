@@ -577,22 +577,27 @@ a:hover{
 
 /* --------------------------------------------------Debut deck--------------------------------------------------*/
 
-#containerAccordion{
+.corpMatch
+{
+    background-image: url("../../public/images/foot1.jpg");
+    width: 400px;
+    height: 270px;
+    border: 3px solid black;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
 
+#premier
+{
+    text-align: center;
 }
 
 #mainDeck{
-    padding-top: 5%;
-    padding-left: 15%;
-    padding-bottom: 5%;
-    padding-right: 15%;
+    display: flex;
+    justify-content: space-around;
 }
 
-#accordion{
-
-  
-
-}
 
 /*--------------------------------------------------Fin deck--------------------------------------------------*/
 
