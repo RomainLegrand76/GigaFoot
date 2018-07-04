@@ -474,6 +474,13 @@ label{
     width: 100%;
     justify-content: center !important;
     text-align: center !important;
+    list-style: none;
+}
+
+#reglesAcceuil
+{
+    text-align: left;
+    margin-left: 42%;
 }
 
 #imgAccueil{
@@ -608,9 +615,16 @@ a:hover{
 
 
 
-#premier
+.buttonDeck
 {
-
+    border:none;
+    padding:6px 0 6px 0;
+    border-radius:75%;
+    border-bottom:3px solid #4753f3;
+    font:bold 13px Arial;
+    color:#555;
+    background:#fff;
+    width: 100px;
 }
 
 #mainDeck{
