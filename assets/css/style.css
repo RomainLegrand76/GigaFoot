@@ -584,7 +584,6 @@ a:hover{
     margin: 50px;
     padding: 25px;
     box-shadow: 5px 10px 8px black;
-
 }
 
 .lieu
@@ -603,13 +602,15 @@ a:hover{
     display: flex;
     justify-content: space-around;
     margin: auto;
+    color: white;
+    font-size: 20px;
 }
 
 
 
 #premier
 {
-    text-align: center;
+
 }
 
 #mainDeck{
