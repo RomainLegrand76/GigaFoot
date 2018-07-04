@@ -3,6 +3,7 @@
 {% block title %}Deck{% endblock %}
 
 {% block body %}
+
     <main id="mainDeck" class="row">
         <article>
             <div class="stade">
@@ -21,11 +22,16 @@
             <div class="corpMatch">
                 <figcaption><img src="images/drapeau/rond/uruguay.png"></figcaption>
                 <div id="premier">
-                    <p> <button class="buttonDeck">Uruguay</button>  VS <button class="buttonDeck">France</button></p>
+                    <p> <button class="buttonDeck" id="buttonDeck1">Uruguay</button>  VS <button class="buttonDeck" id="buttonDeck2">France</button></p>
                 </div>
                 <figcaption><img src="images/drapeau/rond/france.png"></figcaption>
+                <div id="result"></div>
             </div>
             </div>
+            <script type="text/javascript">
+                document.getElementById("buttonDeck1").onclick = function(){document.getElementById("result").innerHTML="<img src='images/drapeau/carre/uruguay.png'>"};
+                document.getElementById("buttonDeck2").onclick = function(){document.getElementById("result").innerHTML="<img src='images/drapeau/carre/france.png'>"};
+            </script>
             <div class="stade">
                 <h2 class="lieu">Kazan Arena</h2>
             <div id="widget_6499da482f6175adce13098b51efc011" class="api">
@@ -42,11 +48,16 @@
             <div class="corpMatch">
                 <figcaption><img src="images/drapeau/rond/bresil.png"></figcaption>
              <div id="premier">
-                 <p> <button class="buttonDeck">Brésil</button> VS <button class="buttonDeck">Belgique</button></p>
+                 <p> <button class="buttonDeck" id="buttonDeck3">Brésil</button> VS <button class="buttonDeck" id="buttonDeck4">Belgique</button></p>
                 </div>
                 <figcaption><img src="images/drapeau/rond/belgique.png"></figcaption>
+                <div id="result1"></div>
             </div>
             </div>
+            <script type="text/javascript">
+                document.getElementById("buttonDeck3").onclick = function(){document.getElementById("result1").innerHTML="<img src='images/drapeau/carre/bresil.png'>"};
+                document.getElementById("buttonDeck4").onclick = function(){document.getElementById("result1").innerHTML="<img src='images/drapeau/carre/belgique.png'>"};
+            </script>
         </article>
         <article>
             <div class="stade">
@@ -67,11 +78,16 @@
             <div class="corpMatch">
                 <figcaption><img src="images/drapeau/rond/russie.png"></figcaption>
                 <div id="premier">
-                    <p><button class="buttonDeck">Russie</button> VS <button class="buttonDeck">Croatie</button></p>
+                    <p><button class="buttonDeck" id="buttonDeck5">Russie</button> VS <button class="buttonDeck" id="buttonDeck6">Croatie</button></p>
                 </div>
                 <figcaption><img src="images/drapeau/rond/croatie.png"></figcaption>
+                <div id="result2"></div>
             </div>
                 </div>
+            <script type="text/javascript">
+                document.getElementById("buttonDeck5").onclick = function(){document.getElementById("result2").innerHTML="<img src='images/drapeau/carre/russie.png'>"};
+                document.getElementById("buttonDeck6").onclick = function(){document.getElementById("result2").innerHTML="<img src='images/drapeau/carre/croatie.png'>"};
+            </script>
              <div class="stade">
                  <h2 class="lieu">Samara Arena</h2>
             <!-- widget meteo -->
@@ -90,11 +106,16 @@
             <div class="corpMatch">
                 <figcaption><img src="images/drapeau/rond/suede.png"></figcaption>
                 <div id="premier">
-                    <p> <button class="buttonDeck">Suède</button> VS <button class="buttonDeck">Angleterre</button> </p>
+                    <p> <button class="buttonDeck" id="buttonDeck7">Suède</button> VS <button class="buttonDeck" id="buttonDeck8">Angleterre</button> </p>
                 </div>
                 <figcaption><img src="images/drapeau/rond/angleterre.png"></figcaption>
+                <div id="result3"></div>
             </div>
              </div>
+            <script type="text/javascript">
+                document.getElementById("buttonDeck7").onclick = function(){document.getElementById("result3").innerHTML="<img src='images/drapeau/carre/suede.png'>"};
+                document.getElementById("buttonDeck8").onclick = function(){document.getElementById("result3").innerHTML="<img src='images/drapeau/carre/angleterre.png'>"};
+            </script>
         </article>
     </main>
 
