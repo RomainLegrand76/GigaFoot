@@ -633,7 +633,21 @@ a:hover{
     margin-bottom: 50px;
 }
 
+.resultat
+{
+    position: absolute;
+    margin: auto;
+    margin-top: 125px;
+}
+
 
 /*--------------------------------------------------Fin deck--------------------------------------------------*/
 
+/*--------------------------------------------------Top Equipe--------------------------------------------------*/
 
+#classement
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 15%;
+}
